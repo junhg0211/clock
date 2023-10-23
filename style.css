@@ -1,6 +1,16 @@
+.light {
+    --background-color: white;
+    --color: black;
+}
+
+.dark {
+    --background-color: black;
+    --color: white;
+}
+
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--color);
     font-family: 'Pretendard', sans-serif;
     margin: 0;
     height: 100vh;

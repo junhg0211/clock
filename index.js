@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         let time = new Date();
 
+        // -- clock
         let hours = time.getHours();
         let minutes = time.getMinutes();
         let seconds = time.getSeconds();
@@ -24,14 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
         clockSecond.innerText = padNumber(seconds, 2);
         clockMillisecond.innerText = padNumber(milliseconds, 2);
 
+        // -- date and timezone
         let year = time.getFullYear();
         let month = time.getMonth();
         let day = time.getDate();
         let weekday = weekdayString(time.getDay());
+        let zone = time.toLocaleTimeString('en-us',{timeZoneName:'long'}).split(/ [AP]M /)[1];
         clockDate.innerText = `${weekday}, ${padNumber(year, 4)}-${padNumber(month, 2)}-${padNumber(day, 2)}`;
-
-        var zone = time.toLocaleTimeString('en-us',{timeZoneName:'long'}).split(/ [AP]M /)[1];
         clockTimezone.innerText = zone;
+
+        // -- theme
+        if (hours < 6 || hours >= 18) {
+            document.body.classList = ["dark"];
+        } else {
+            document.body.classList = ["light"];
+        }
     }, 1000 / 60);
 
     // -- fullscreen
