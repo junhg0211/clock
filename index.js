@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let year = time.getFullYear();
         let month = time.getMonth();
         let day = time.getDate();
-        clockDate.innerText = `${orderString(day)} ${monthString(month)}, ${year}`
+        let weekday = weekdayString(time.getDay());
+        clockDate.innerText = `${weekday}, ${padNumber(year, 4)}-${padNumber(month, 2)}-${padNumber(day, 2)}`;
 
         var zone = time.toLocaleTimeString('en-us',{timeZoneName:'long'}).split(/ [AP]M /)[1];
         clockTimezone.innerText = zone;
