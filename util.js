@@ -9,3 +9,9 @@ function padNumber(number, length) {
 
     return zeros + number.toString();
 }
+
+function fullscreen() {
+    let el = document.documentElement,
+        rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+    rfs.call(el);
+}
