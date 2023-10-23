@@ -24,6 +24,10 @@ body {
     flex: 1;
 }
 
+.date {
+    text-align: center;
+}
+
 .clock-big {
     font-size: 10rem;
     display: inline-block;
