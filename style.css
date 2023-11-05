@@ -52,7 +52,7 @@ body {
 }
 
 .clock-small {
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 2rem;
     display: inline-block;
 }
