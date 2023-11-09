@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let day = time.getDate();
         let weekday = weekdayString(time.getDay());
         if (previousDay != day) {
-            clockDate.innerText = `${weekday}, ${padNumber(year, 4)}-${padNumber(month, 2)}-${padNumber(day, 2)}`;
+            clockDate.innerText = `${weekday}, ${padNumber(year, 4)}-${padNumber(month+1, 2)}-${padNumber(day, 2)}`;
         }
 
         // -- theme
