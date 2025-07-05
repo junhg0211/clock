@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let hours = time.getHours();
         let minutes = time.getMinutes();
         let seconds = time.getSeconds();
-        let milliseconds = Math.floor(time.getMilliseconds() / 1000 * 60);
+        let milliseconds = Math.floor(time.getMilliseconds() / 1000 * 100);
         if (previousHours != hours) {
             clockHour.innerText = hours;
         }
